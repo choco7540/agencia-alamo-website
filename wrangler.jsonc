@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "agencia-alamo-leads",
-      "database_id": "REPLACE_WITH_YOUR_CLOUDFLARE_D1_DATABASE_ID"
+      "database_id": "fc2dff05-6cb6-41ac-9d5b-e8a7eeb43335"
     }
   ],
   "observability": {
