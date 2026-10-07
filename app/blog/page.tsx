@@ -1,0 +1,6 @@
+import {pageMetadata} from '@/lib/seo';
+import {SEO} from '@/components/seo';
+import {articles,services} from '@/lib/content';
+import {origin} from '@/lib/config';
+export const metadata=pageMetadata({"title": "Consejos de Seguros de Auto en Español", "description": "Aprende a comparar cotizaciones de auto, preparar documentos y revisar tu renovación. Consejos de Agencia Alamo con atención en español.", "path": "/blog", "image": "/auto-cotizar.webp", "english": false});
+export default function Blog(){return <main id="contenido"><SEO path="/blog"/><section className="innerhero"><div className="wrap"><div className="eyebrow">EL BLOG DE AGENCIA ALAMO</div><h1>Entender tu seguro<br/>es un buen comienzo.</h1><p>Ideas claras para tus decisiones de todos los días.</p></div></section><section className="section wrap"><div className="blog-grid">{articles.map(a=><a className="blog-card" href={'/blog/'+a.slug} key={a.slug}><small>{a.category}</small><h3>{a.title}</h3><p>{a.summary}</p><span className="textlink">Leer consejo ↗</span></a>)}</div><h2 style={{marginTop:45}}>Guías para tus preguntas</h2><div className="areas">{services.filter(s=>['seguro-sr22-fr44','seguro-licencia-internacional'].includes(s.slug)).map(s=><a className="area" href={'/'+s.slug} key={s.slug}>{s.short} ↗</a>)}</div></section></main>}
